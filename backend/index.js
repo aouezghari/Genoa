@@ -4,7 +4,6 @@ import mongoose from "mongoose";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 dotenv.config();
-import { UserRouter } from "./routes/user.js";
 import authRoutes from './routes/auth.routes.js';
 import adminRoutes from './routes/admin.routes.js';
 import treeRoutes from './routes/tree.routes.js';
@@ -21,7 +20,6 @@ app.use(
   })
 );
 app.use(cookieParser());
-app.use("/user", UserRouter);
 app.use('/auth', authRoutes);
 app.use('/admin', adminRoutes);
 app.use('/tree', treeRoutes);
